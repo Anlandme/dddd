@@ -17,7 +17,6 @@ def china_gksccz():
 
     lpr = MacroChinaService.lpr(samples)
 
-    print(lpr)
     #https://blog.csdn.net/qq_42140717/article/details/124350979
 
     result = ApiResult.success(data=lpr)

@@ -1,5 +1,6 @@
 from flask import request
 from functools import wraps
+import json
 
 
 def api_auth(func):
@@ -18,7 +19,7 @@ class ApiResult(object):
     def __init__(self):
         self.code = 0
         self.message = "SUCCESS"
-        self.data = None
+        self.data = ""
         self.page_info = None
 
     def __str__(self):
@@ -44,28 +45,10 @@ class ApiResult(object):
         return result.__dict__
 
     @staticmethod
-    def success(code=0, message="SUCCESS", data=None, page_info=None):
+    def success(code=0, message="SUCCESS", data="", page_info=None):
         result = ApiResult()
         result.code = code
         result.message = message
-
-        data_list = []
-        try:
-            if type(data) == list:
-                for item in data:
-                    if type(item) not in [dict, str, int, float]:
-                        data_list.append(item.__dict__)
-                # end for
-        except Exception:
-            pass
-        if len(data_list) > 0:
-            result.data = data_list
-        else:
-            result.data = data
-
-        # 分页信息
-        if page_info and type(page_info) not in [dict]:
-            page_info = page_info.__dict__
-        result.page_info = page_info
+        result.data = data
 
         return result.__dict__

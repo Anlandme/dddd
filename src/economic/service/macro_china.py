@@ -40,8 +40,7 @@ class MacroChinaService(object):
                 'rate1':rate1,
                 'rate2':rate2}
 
-        json_str = json.dumps(data, ensure_ascii=False)
-        return json_str
+        return data
 
 if "__main__" == __name__:
     pass
