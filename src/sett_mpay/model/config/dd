@@ -1,0 +1,44 @@
+"""
+    渠道规则
+    sett_conf_v2.t_channel_merchant_info
+    sett_conf_v2.t_channel_rate_info
+"""
+from src.common import List, Dict
+from src.common import Xlog, Xutil, BaseBean, MySQLClient
+from src.common.model.model_ou_info import OUInfoData
+from src.sett_mpay.model.config.model_config_plt_info import PltInfoData
+
+
+class SpecialRulesData():
+    def __init__(self):
+        self.contract_no = ''
+        self.channel = ''
+        self.cid = ''
+        self.country = ''
+        self.province = ''
+        self.city = ''
+        self.percent_fee_rate = ''
+        self.per_transaction_fee = ''
+        self.per_transaction_fee_currency = ''
+        self.had_special_rules = ''
+        self.special_rules = ''
+        self.tax_fee_order = ''
+        self.payment_period = ''
+        self.sett_currency = ''
+        self.channel_mdm_id = ''
+        self.channel_mdm_name = ''
+
+        self.plt_type = ''
+        self.plt_ou_id = ''
+        self.plt_ou_name = ''
+        self.plt_ou_short = ''
+        self.plt_mdm_id = ''
+        self.plt_mdm_name = ''
+        self.plt_coa_no = ''
+        self.plt_coa_name = ''
+        self.plt_cost_no = ''
+        self.plt_cost_name = ''
+        self.main_date_begin = ''
+        self.main_date_end = ''
+        self.sub_date_begin = ''
+        self.sub_date_end = ''

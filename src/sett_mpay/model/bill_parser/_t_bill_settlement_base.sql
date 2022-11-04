@@ -1,0 +1,43 @@
+-- db_mpay_channel.t_bill_settlement_base  | HS基础账单
+USE db_mpay_channel;
+DROP TABLE IF EXISTS t_bill_settlement_base;
+CREATE TABLE `t_bill_settlement_base` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增主键',
+  `uniq_no` varchar(64) NOT NULL DEFAULT '' COMMENT '唯一编号（防重）',
+  `bill_type` varchar(64) NOT NULL DEFAULT '' COMMENT '账单类型（HM、HS）',
+  `bill_month` varchar(10) NOT NULL DEFAULT '' COMMENT '账单月份（YYYY-MM）',
+  `sett_month` varchar(10) NOT NULL DEFAULT '' COMMENT '结算月份（YYYY-MM）',
+  `data_month` varchar(10) NOT NULL DEFAULT '' COMMENT '数据月份（YYYY-MM）',
+  `data_date` varchar(10) NOT NULL DEFAULT '' COMMENT '数据日期（YYYY-MM-DD）',
+  `due_month` varchar(10) NOT NULL DEFAULT '' COMMENT '应收月份（YYYY-MM）',
+  `due_date` varchar(10) NOT NULL DEFAULT '' COMMENT '应收日期（YYYY-MM-DD）',
+  `product_no` varchar(64) DEFAULT '' COMMENT '渠道产品编号',
+  `product_name` varchar(128) DEFAULT '' COMMENT '渠道产品名称',
+  `channel` varchar(64) NOT NULL DEFAULT '' COMMENT '渠道',
+  `cid` varchar(64) NOT NULL DEFAULT '' COMMENT 'CID',
+  `mcid` varchar(64) NOT NULL DEFAULT '' COMMENT 'MCID',
+  `sub_channel` varchar(128) NOT NULL DEFAULT '' COMMENT '子渠道',
+  `channel_country_code` varchar(128) NOT NULL DEFAULT '' COMMENT '渠道侧国家代码',
+  `channel_country_name` varchar(128) NOT NULL DEFAULT '' COMMENT '渠道侧国家名称',
+  `midas_country_code` varchar(128) NOT NULL DEFAULT '' COMMENT '米大师站点国家代码',
+  `midas_country_name` varchar(128) NOT NULL DEFAULT '' COMMENT '米大师站点国家名称',
+  `tran_type` varchar(64) NOT NULL DEFAULT '' COMMENT '交易类型',
+  `tran_currency` char(3) NOT NULL DEFAULT '' COMMENT '交易币种',
+  `tran_amount` double(20,4) NOT NULL DEFAULT '0.0000' COMMENT '交易金额',
+  `tran_numbers` double(20,4) NOT NULL DEFAULT '0.0000' COMMENT '交易笔数',
+  `ori_currency` char(3) NOT NULL DEFAULT '' COMMENT '计费币种',
+  `ori_income` double(20,4) NOT NULL DEFAULT '0.0000' COMMENT '计费金额（计费币种）',
+  `ori_refund` double(20,4) NOT NULL DEFAULT '0.0000' COMMENT '退款金额（计费币种）',
+  `ori_channel_tax` double(20,4) NOT NULL DEFAULT '0.0000' COMMENT '渠道代缴税（计费币种）',
+  `ori_channel_tax_rate` double(20,4) NOT NULL DEFAULT '0.0000' COMMENT '渠道代缴税率（计费币种）',
+  `ori_channel_fee` double(20,4) NOT NULL DEFAULT '0.0000' COMMENT '渠道手续费（计费币种）',
+  `ori_channel_fee_rate` double(20,4) NOT NULL DEFAULT '0.0000' COMMENT '渠道手续费（计费币种）',
+  `ori_channel_settlement` double(20,4) NOT NULL DEFAULT '0.0000' COMMENT '渠道结算金额（计费币种）',
+  `sett_currency` char(3) NOT NULL DEFAULT '' COMMENT '结算币种',
+  `remark` varchar(128) NOT NULL DEFAULT '' COMMENT '备注',
+  `special_note` varchar(128) NOT NULL DEFAULT '' COMMENT '冗余字段（适配特殊场景）',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+;
