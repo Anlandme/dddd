@@ -8,7 +8,7 @@ from src.comm.xlog import Xlog
 # config file
 abs_path = str(os.path.abspath(__file__))
 sys_path = os.path.abspath("../../../")
-conf_file_sys = "{}/conf/sys.ini".format(sys_path)
+conf_file_sys = "../conf/sys.ini".format(sys_path)
 
 
 # config instance
