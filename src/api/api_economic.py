@@ -35,3 +35,9 @@ def china_lpr():
 
     result = ApiResult.success(data=lpr)
     return result
+
+@api.route("/china/shibor", methods=["GET", "POST"])
+def china_shibor():
+    macro_china_shibor_all = MacroChinaService.shibor()
+    result = ApiResult.success(data=macro_china_shibor_all)
+    return result
