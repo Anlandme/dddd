@@ -40,6 +40,10 @@ class MacroChinaService(object):
     @staticmethod
     def shibor():
         macro_china_shibor_all = ak.macro_china_shibor_all()
+
+        #去除第一行
+        macro_china_shibor_all = macro_china_shibor_all.tail(macro_china_shibor_all.shape[0]-1)
+
         list_data = []
         for index, row in macro_china_shibor_all.iterrows():
             tmp_dict = {
