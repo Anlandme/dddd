@@ -1,5 +1,5 @@
 bin
+venv
 
 *.pyc
 
-bin
