@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/root/dddd/src/main.py", line 3, in <module>
+    from src.common import conf_sys
+  File "/root/dddd/src/common/__init__.py", line 4, in <module>
+    from src.comm.mail_client import MailConfig
+  File "/root/dddd/src/comm/mail_client.py", line 11, in <module>
+    from tencentcloud.common import credential
+ModuleNotFoundError: No module named 'tencentcloud'
