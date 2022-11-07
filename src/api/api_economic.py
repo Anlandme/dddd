@@ -11,16 +11,19 @@ import pandas as pd
 
 api = Blueprint(__file__, __name__, url_prefix='/api/economic')
 
-@api.route("/china_gksccz", methods=["GET", "POST"])
+@api.route("/china/qyspjg", methods=["GET", "POST"])
+def china_qyspjg():
+    resp = MacroChinaService.qyspjg()
+    return ApiResult.success(data=resp)
+
+@api.route("/china/gksccz", methods=["GET", "POST"])
 def china_gksccz():
     samples = int(request.args.get("samples"))
-
-    lpr = MacroChinaService.lpr(samples)
-
-    #https://blog.csdn.net/qq_42140717/article/details/124350979
-
+    lpr = MacroChinaService.gksccz()
     result = ApiResult.success(data=lpr)
     return result
+
+
 
 @api.route("/china/lpr", methods=["GET", "POST"])
 def china_lpr():

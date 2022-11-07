@@ -4,15 +4,15 @@
 import sys
 import json
 import akshare as ak
-
+import tushare as ts
 
 
 class MacroChinaService(object):
 
     @staticmethod
     def gksccz():
-        macro_china_lpr_df = ak.macro_china_lpr()
-        return macro_china_lpr_df
+        macro_china_gksccz_df = ak.macro_china_gksccz()
+        print(macro_china_gksccz_df)
 
     @staticmethod
     def lpr(samples):
@@ -37,6 +37,13 @@ class MacroChinaService(object):
             list_data.append(data)
 
         return list_data
+
+    # 企业商品价格指数
+    @staticmethod
+    def qyspjg():
+        macro_china_qyspjg = ak.macro_china_qyspjg()
+        print(macro_china_qyspjg)
+
 
 if "__main__" == __name__:
     pass
