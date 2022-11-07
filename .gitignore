@@ -101,10 +101,3 @@ ENV/
 
 # Rope project settings
 .ropeproject
-
-# add by xiangtaoli
-*/.settings/
-*.xlsx
-conf_dev
-conf
-src/common/__init__.py
