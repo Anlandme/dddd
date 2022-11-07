@@ -21,3 +21,14 @@ def china_gksccz():
 
     result = ApiResult.success(data=lpr)
     return result
+
+@api.route("/china/lpr", methods=["GET", "POST"])
+def china_lpr():
+    samples = int(request.args.get("samples"))
+
+    lpr = MacroChinaService.lpr(samples)
+
+    #https://blog.csdn.net/qq_42140717/article/details/124350979
+
+    result = ApiResult.success(data=lpr)
+    return result
