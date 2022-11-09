@@ -8,12 +8,7 @@ import akshare as ak
 
 
 class MacroChinaService(object):
-
-    @staticmethod
-    def gksccz():
-        macro_china_gksccz_df = ak.macro_china_gksccz()
-        print(macro_china_gksccz_df)
-
+    #lpr信息
     @staticmethod
     def lpr(samples):
         macro_china_lpr_df = ak.macro_china_lpr()
@@ -37,6 +32,7 @@ class MacroChinaService(object):
 
         return list_data
 
+    #同业拆借利率（上海）
     @staticmethod
     def shibor():
         macro_china_shibor_all = ak.macro_china_shibor_all()
@@ -70,9 +66,17 @@ class MacroChinaService(object):
 
     # 企业商品价格指数
     @staticmethod
-    def qyspjg():
-        macro_china_qyspjg = ak.macro_china_qyspjg()
-        print(macro_china_qyspjg)
+    def gdp():
+        macro_china_dgp = ak.macro_china_gdp_yearly()
+        list_data = []
+        for index, row in macro_china_dgp.iterrows():
+            tmp_dict = {
+                'data' : str(getattr(row, 'date')),
+                'value': getattr(row, 'value'),
+            }
+            list_data.append(tmp_dict)
+
+        return  list_data
 
 
 if "__main__" == __name__:
