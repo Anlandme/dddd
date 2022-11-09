@@ -4,7 +4,6 @@
 import sys
 import json
 import akshare as ak
-import tushare as ts
 import gopup as gp
 
 
