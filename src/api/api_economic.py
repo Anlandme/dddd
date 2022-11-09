@@ -28,6 +28,12 @@ def china_shibor():
     result = ApiResult.success(data=macro_china_shibor_all)
     return result
 
+@api.route("/china/hk_market_info", methods=["GET", "POST"])
+def china_hk_market_info():
+    macro_china_hk_market_info = MacroChinaService.hk_market_info()
+    result = ApiResult.success(data=macro_china_hk_market_info)
+    return result
+
 @api.route("/china/gdp", methods=["GET", "POST"])
 def china_gdp():
     macro_china_gdp = MacroChinaService.gdp()

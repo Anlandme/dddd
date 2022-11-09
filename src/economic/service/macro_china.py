@@ -64,6 +64,38 @@ class MacroChinaService(object):
 
         return list_data
 
+    #同业拆借利率（上海）
+    @staticmethod
+    def hk_market_info():
+        macro_china_hk_market_info = ak.macro_china_hk_market_info()
+
+        #去除第一行
+        macro_china_hk_market_info = macro_china_hk_market_info.tail(macro_china_hk_market_info.shape[0]-1)
+
+        list_data = []
+        for index, row in macro_china_hk_market_info.iterrows():
+            tmp_dict = {
+                'date': index,
+                'ON_定价' : getattr(row, 'ON_定价'),
+                'ON_涨跌幅' : getattr(row, 'ON_涨跌幅'),
+                '1W_定价' : getattr(row, '1W_定价'),
+                '1W_涨跌幅' : getattr(row, '1W_涨跌幅'),
+                '2W_定价' : getattr(row, '2W_定价'),
+                '2W_涨跌幅' : getattr(row, '2W_涨跌幅'),
+                '1M_定价' : getattr(row, '1M_定价'),
+                '1M_涨跌幅' : getattr(row, '2M_涨跌幅'),
+                '2M_定价': getattr(row, '2M_定价'),
+                '2M_涨跌幅': getattr(row, '1M_涨跌幅'),
+                '3M_定价' : getattr(row, '3M_定价'),
+                '3M_涨跌幅' : getattr(row, '3M_涨跌幅'),
+                '6M_定价' : getattr(row, '6M_定价'),
+                '6M_涨跌幅' : getattr(row, '6M_涨跌幅'),
+                '1Y_定价' : getattr(row, '1Y_定价'),
+                '1Y_涨跌幅' : getattr(row, '1Y_涨跌幅')}
+            list_data.append(tmp_dict)
+
+        return list_data
+
     # 企业商品价格指数
     @staticmethod
     def gdp():
