@@ -4,7 +4,8 @@
 import sys
 import json
 import akshare as ak
-#import tushare as ts
+import tushare as ts
+import gopup as gp
 
 
 class MacroChinaService(object):
@@ -67,12 +68,19 @@ class MacroChinaService(object):
     # 企业商品价格指数
     @staticmethod
     def gdp():
-        macro_china_dgp = ak.macro_china_gdp_yearly()
+        macro_china_dgp = gp.get_gdp_quarter()
         list_data = []
         for index, row in macro_china_dgp.iterrows():
             tmp_dict = {
-                'data' : str(getattr(row, 'date')),
-                'value': getattr(row, 'value'),
+                '季度' : str(getattr(row, '季度')),
+                '国内生产总值绝对值(亿元)': getattr(row, '国内生产总值 绝对值(亿元)'),
+                '国内生产总值同比增长': getattr(row, '国内生产总值 同比增长'),
+                '第一产业绝对值(亿元）': getattr(row, '第一产业 绝对值(亿元)'),
+                '第一产业同比增长': getattr(row, '第一产业 同比增长'),
+                '第二产业绝对值(亿元)': getattr(row, '第二产业 绝对值(亿元)'),
+                '第二产业同比增长': getattr(row, '第二产业 同比增长'),
+                '第三产业绝对值(亿元)': getattr(row, '第三产业 绝对值(亿元)'),
+                '第三产业同比增长': getattr(row, '第三产业 同比增长'),
             }
             list_data.append(tmp_dict)
 
