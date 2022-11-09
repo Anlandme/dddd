@@ -1412,3 +1412,119 @@
   RequestsDependencyWarning)
 [2022-11-07 19:49:51,958 WARNING] 15932 139735804544832  * Debugger is active!
 [2022-11-07 19:49:51,959 INFO] 15932 139735804544832  * Debugger PIN: 121-117-894
+Traceback (most recent call last):
+  File "main.py", line 3, in <module>
+    from src.common import conf_sys
+ModuleNotFoundError: No module named 'src'
+ * Serving Flask app "main" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+/usr/local/lib/python3.7/dist-packages/requests/__init__.py:91: RequestsDependencyWarning: urllib3 (1.26.12) or chardet (3.0.4) doesn't match a supported version!
+  RequestsDependencyWarning)
+[2022-11-07 19:53:24,768 WARNING] 17011 139973627311936  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-11-07 19:53:24,769 INFO] 17011 139973627311936  * Running on http://172.29.92.240:38080/ (Press CTRL+C to quit)
+[2022-11-07 19:53:24,770 INFO] 17011 139973627311936  * Restarting with stat
+/usr/local/lib/python3.7/dist-packages/requests/__init__.py:91: RequestsDependencyWarning: urllib3 (1.26.12) or chardet (3.0.4) doesn't match a supported version!
+  RequestsDependencyWarning)
+[2022-11-07 19:53:25,594 WARNING] 17014 139784104040256  * Debugger is active!
+[2022-11-07 19:53:25,594 INFO] 17014 139784104040256  * Debugger PIN: 121-117-894
+[2022-11-07 19:53:44,716 INFO] 17014 139783871395584 119.147.10.201 - - [07/Nov/2022 19:53:44] "GET /api/economic/china/shibor HTTP/1.1" 200 -
+[2022-11-07 19:53:50,956 INFO] 17014 139783871395584 119.147.10.201 - - [07/Nov/2022 19:53:50] "GET /api/economic/china/shibor HTTP/1.1" 200 -
+ * Serving Flask app "main" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+/usr/local/lib/python3.7/dist-packages/requests/__init__.py:91: RequestsDependencyWarning: urllib3 (1.26.12) or chardet (3.0.4) doesn't match a supported version!
+  RequestsDependencyWarning)
+[2022-11-09 09:26:05,134 WARNING] 30358 140273575708480  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-11-09 09:26:05,134 INFO] 30358 140273575708480  * Running on http://172.29.92.240:38080/ (Press CTRL+C to quit)
+[2022-11-09 09:26:05,136 INFO] 30358 140273575708480  * Restarting with stat
+/usr/local/lib/python3.7/dist-packages/requests/__init__.py:91: RequestsDependencyWarning: urllib3 (1.26.12) or chardet (3.0.4) doesn't match a supported version!
+  RequestsDependencyWarning)
+[2022-11-09 09:26:06,176 WARNING] 30377 139690802026304  * Debugger is active!
+[2022-11-09 09:26:06,177 INFO] 30377 139690802026304  * Debugger PIN: 121-117-894
+ * Serving Flask app "main" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+/usr/local/lib/python3.7/dist-packages/requests/__init__.py:91: RequestsDependencyWarning: urllib3 (1.26.12) or chardet (3.0.4) doesn't match a supported version!
+  RequestsDependencyWarning)
+[2022-11-09 09:26:11,902 WARNING] 30413 140475199809344  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-11-09 09:26:11,902 INFO] 30413 140475199809344  * Running on http://172.29.92.240:38080/ (Press CTRL+C to quit)
+[2022-11-09 09:26:11,903 INFO] 30413 140475199809344  * Restarting with stat
+/usr/local/lib/python3.7/dist-packages/requests/__init__.py:91: RequestsDependencyWarning: urllib3 (1.26.12) or chardet (3.0.4) doesn't match a supported version!
+  RequestsDependencyWarning)
+[2022-11-09 09:26:12,715 WARNING] 30416 140040234116928  * Debugger is active!
+[2022-11-09 09:26:12,715 INFO] 30416 140040234116928  * Debugger PIN: 121-117-894
+ * Serving Flask app "main" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+/usr/local/lib/python3.7/dist-packages/requests/__init__.py:91: RequestsDependencyWarning: urllib3 (1.26.12) or chardet (3.0.4) doesn't match a supported version!
+  RequestsDependencyWarning)
+[2022-11-09 09:26:17,940 WARNING] 30439 140169285769024  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-11-09 09:26:17,940 INFO] 30439 140169285769024  * Running on http://172.29.92.240:38080/ (Press CTRL+C to quit)
+[2022-11-09 09:26:17,941 INFO] 30439 140169285769024  * Restarting with stat
+/usr/local/lib/python3.7/dist-packages/requests/__init__.py:91: RequestsDependencyWarning: urllib3 (1.26.12) or chardet (3.0.4) doesn't match a supported version!
+  RequestsDependencyWarning)
+[2022-11-09 09:26:18,749 WARNING] 30442 140225154242368  * Debugger is active!
+[2022-11-09 09:26:18,749 INFO] 30442 140225154242368  * Debugger PIN: 121-117-894
+[2022-11-09 09:27:03,693 INFO] 30442 140224996873984 39.101.68.64 - - [09/Nov/2022 09:27:03] "GET /api/economic/china/shibor HTTP/1.1" 200 -
+[2022-11-09 09:28:29,433 INFO] 30442 140224996873984 39.101.68.64 - - [09/Nov/2022 09:28:29] "GET /api/economic/china/gdp HTTP/1.1" 200 -
+[2022-11-09 09:28:46,048 INFO] 30442 140224996873984 39.101.68.64 - - [09/Nov/2022 09:28:46] "GET /api/economic/china/lpr?samples=1000 HTTP/1.1" 200 -
+[2022-11-09 09:28:51,374 INFO] 30442 140224996873984 39.101.68.64 - - [09/Nov/2022 09:28:51] "GET /api/economic/china/shibor HTTP/1.1" 200 -
+[2022-11-09 09:29:01,321 INFO] 30442 140224996873984 39.101.68.64 - - [09/Nov/2022 09:29:01] "GET /api/economic/china/lpr?samples=1000 HTTP/1.1" 200 -
+[2022-11-09 09:29:01,793 INFO] 30442 140224996873984 39.101.68.64 - - [09/Nov/2022 09:29:01] "GET /api/economic/china/shibor HTTP/1.1" 200 -
+[2022-11-09 09:29:06,848 INFO] 30442 140224996873984 39.101.68.64 - - [09/Nov/2022 09:29:06] "GET /api/economic/china/gdp HTTP/1.1" 200 -
+[2022-11-09 09:29:44,883 INFO] 30442 140224996873984 39.101.68.64 - - [09/Nov/2022 09:29:44] "GET /api/economic/china/gdp HTTP/1.1" 200 -
+[2022-11-09 09:29:44,904 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 09:29:44] "GET /api/economic/china/gdp HTTP/1.1" 200 -
+[2022-11-09 09:29:51,303 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 09:29:51] "GET /api/economic/china/gdp HTTP/1.1" 200 -
+[2022-11-09 09:30:00,170 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 09:30:00] "GET /api/economic/china/lpr?samples=1000 HTTP/1.1" 200 -
+[2022-11-09 09:30:00,644 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 09:30:00] "GET /api/economic/china/shibor HTTP/1.1" 200 -
+[2022-11-09 09:30:05,705 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 09:30:05] "GET /api/economic/china/gdp HTTP/1.1" 200 -
+[2022-11-09 10:00:00,191 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 10:00:00] "GET /api/economic/china/lpr?samples=1000 HTTP/1.1" 200 -
+[2022-11-09 10:00:00,768 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 10:00:00] "GET /api/economic/china/shibor HTTP/1.1" 200 -
+[2022-11-09 10:00:06,040 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 10:00:06] "GET /api/economic/china/gdp HTTP/1.1" 200 -
+[2022-11-09 10:30:00,645 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 10:30:00] "GET /api/economic/china/lpr?samples=1000 HTTP/1.1" 200 -
+[2022-11-09 10:30:01,179 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 10:30:01] "GET /api/economic/china/shibor HTTP/1.1" 200 -
+[2022-11-09 10:30:05,452 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 10:30:05] "GET /api/economic/china/gdp HTTP/1.1" 200 -
+[2022-11-09 11:00:00,150 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 11:00:00] "GET /api/economic/china/lpr?samples=1000 HTTP/1.1" 200 -
+[2022-11-09 11:00:00,728 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 11:00:00] "GET /api/economic/china/shibor HTTP/1.1" 200 -
+[2022-11-09 11:00:02,664 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 11:00:02] "GET /api/economic/china/gdp HTTP/1.1" 200 -
+[2022-11-09 11:30:00,656 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 11:30:00] "GET /api/economic/china/lpr?samples=1000 HTTP/1.1" 200 -
+[2022-11-09 11:30:01,139 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 11:30:01] "GET /api/economic/china/shibor HTTP/1.1" 200 -
+[2022-11-09 11:30:03,061 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 11:30:03] "GET /api/economic/china/gdp HTTP/1.1" 200 -
+[2022-11-09 12:00:00,166 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 12:00:00] "GET /api/economic/china/lpr?samples=1000 HTTP/1.1" 200 -
+[2022-11-09 12:00:00,755 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 12:00:00] "GET /api/economic/china/shibor HTTP/1.1" 200 -
+[2022-11-09 12:00:03,479 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 12:00:03] "GET /api/economic/china/gdp HTTP/1.1" 200 -
+[2022-11-09 12:30:00,640 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 12:30:00] "GET /api/economic/china/lpr?samples=1000 HTTP/1.1" 200 -
+[2022-11-09 12:30:01,223 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 12:30:01] "GET /api/economic/china/shibor HTTP/1.1" 200 -
+[2022-11-09 12:30:02,912 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 12:30:02] "GET /api/economic/china/gdp HTTP/1.1" 200 -
+[2022-11-09 12:32:12,407 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 12:32:12] "GET /api/economic/china/gdp HTTP/1.1" 200 -
+[2022-11-09 12:32:19,721 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 12:32:19] "GET /api/economic/china/lpr?samples=1000 HTTP/1.1" 200 -
+[2022-11-09 12:32:20,218 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 12:32:20] "GET /api/economic/china/shibor HTTP/1.1" 200 -
+[2022-11-09 12:32:22,528 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 12:32:22] "GET /api/economic/china/gdp HTTP/1.1" 200 -
+[2022-11-09 12:32:48,594 INFO] 30442 140224910849792 39.101.68.64 - - [09/Nov/2022 12:32:48] "GET /api/economic/china/gdp HTTP/1.1" 200 -
+[2022-11-09 12:32:48,603 INFO] 30442 140224996873984 39.101.68.64 - - [09/Nov/2022 12:32:48] "GET /api/economic/china/gdp HTTP/1.1" 200 -
+[2022-11-09 12:32:54,610 INFO] 30442 140224996873984 39.101.68.64 - - [09/Nov/2022 12:32:54] "GET /api/economic/china/gdp HTTP/1.1" 200 -
+[2022-11-09 12:33:55,586 INFO] 30442 140225154242368  * Detected change in '/root/dddd/src/economic/service/macro_china.py', reloading
+[2022-11-09 12:33:55,802 INFO] 30439 140169285769024  * Restarting with stat
+/usr/local/lib/python3.7/dist-packages/requests/__init__.py:91: RequestsDependencyWarning: urllib3 (1.26.12) or chardet (3.0.4) doesn't match a supported version!
+  RequestsDependencyWarning)
+Traceback (most recent call last):
+  File "/root/dddd/src/main.py", line 6, in <module>
+    from src.api.api_economic import api as api_economic
+  File "/root/dddd/src/api/api_economic.py", line 4, in <module>
+    from src.economic.service.macro_china import MacroChinaService
+  File "/root/dddd/src/economic/service/macro_china.py", line 7, in <module>
+    import tushare as ts
+ModuleNotFoundError: No module named 'tushare'
