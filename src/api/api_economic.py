@@ -39,3 +39,9 @@ def china_gdp():
     macro_china_gdp = MacroChinaService.gdp()
     result = ApiResult.success(data=macro_china_gdp)
     return result
+
+@api.route("/china/gdp_yearly", methods=["GET", "POST"])
+def china_gdp_yearly():
+    macro_china_gdp_yearly = MacroChinaService.gdp_yearly()
+    result = ApiResult.success(data=macro_china_gdp_yearly)
+    return result

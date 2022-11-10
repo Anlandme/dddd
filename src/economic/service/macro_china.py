@@ -6,6 +6,8 @@ import json
 import akshare as ak
 import gopup as gp
 
+import datetime
+
 
 class MacroChinaService(object):
     #lpr信息
@@ -96,7 +98,7 @@ class MacroChinaService(object):
 
         return list_data
 
-    # 企业商品价格指数
+    # 季度GDP
     @staticmethod
     def gdp():
         macro_china_dgp = gp.get_gdp_quarter()
@@ -117,6 +119,44 @@ class MacroChinaService(object):
 
         return  list_data
 
+    # 年度GDP
+    @staticmethod
+    def gdp_yearly():
+        macro_china_dgp = gp.get_gdp_quarter()
+
+        totla_gdp = {} #年总gdp
+        dycy_gdp = {}  #年第一产业总gdp
+        decy_gdp = {}  #年第二产业总gdp
+        dscy_gdp = {}  #年第三产业总gdp
+
+        list_data = []
+        for index, row in macro_china_dgp.iterrows():
+            date_year = datetime.datetime.strptime(str(getattr(row, '季度')), '%Y-%m-%d').date()
+            current_year = date_year.year
+
+            if bool(totla_gdp.get(current_year)):
+                totla_gdp[current_year] = totla_gdp[current_year] + float(getattr(row, '国内生产总值 绝对值(亿元)'))
+                dycy_gdp[current_year] = dycy_gdp[current_year] + float(getattr(row, '第一产业 绝对值(亿元)'))
+                decy_gdp[current_year] = decy_gdp[current_year] + float(getattr(row, '第二产业 绝对值(亿元)'))
+                dscy_gdp[current_year] = dscy_gdp[current_year] + float(getattr(row, '第三产业 绝对值(亿元)'))
+            else:
+                totla_gdp[current_year] = float(getattr(row, '国内生产总值 绝对值(亿元)'))
+                dycy_gdp[current_year] = float(getattr(row, '第一产业 绝对值(亿元)'))
+                decy_gdp[current_year] = float(getattr(row, '第二产业 绝对值(亿元)'))
+                dscy_gdp[current_year] = float(getattr(row, '第三产业 绝对值(亿元)'))
+
+        for key in totla_gdp:
+            tmp_dict = {
+                'date' : key,
+                '总GDP' :  totla_gdp[key],
+                '第一产业总GDP': dycy_gdp[key],
+                '第二产业总GDP': decy_gdp[key],
+                '第三产业总GDP': dscy_gdp[key],
+            }
+            list_data.append(tmp_dict)
+
+        print(list_data)
+        return list_data
 
 if "__main__" == __name__:
     pass
