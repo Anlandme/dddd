@@ -134,12 +134,7 @@ class MacroChinaService(object):
             date_year = datetime.datetime.strptime(str(getattr(row, '季度')), '%Y-%m-%d').date()
             current_year = date_year.year
 
-            if bool(totla_gdp.get(current_year)):
-                totla_gdp[current_year] = totla_gdp[current_year] + float(getattr(row, '国内生产总值 绝对值(亿元)'))
-                dycy_gdp[current_year] = dycy_gdp[current_year] + float(getattr(row, '第一产业 绝对值(亿元)'))
-                decy_gdp[current_year] = decy_gdp[current_year] + float(getattr(row, '第二产业 绝对值(亿元)'))
-                dscy_gdp[current_year] = dscy_gdp[current_year] + float(getattr(row, '第三产业 绝对值(亿元)'))
-            else:
+            if not bool(totla_gdp.get(current_year)):
                 totla_gdp[current_year] = float(getattr(row, '国内生产总值 绝对值(亿元)'))
                 dycy_gdp[current_year] = float(getattr(row, '第一产业 绝对值(亿元)'))
                 decy_gdp[current_year] = float(getattr(row, '第二产业 绝对值(亿元)'))
