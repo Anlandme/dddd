@@ -150,7 +150,25 @@ class MacroChinaService(object):
             }
             list_data.append(tmp_dict)
 
-        print(list_data)
+        return list_data
+
+        # 年度GDP
+
+    @staticmethod
+    def pmi():
+        macro_china_pmi = ak.macro_china_pmi()
+
+        list_data = []
+        for index, row in macro_china_pmi.iterrows():
+            tmp_dict = {
+                '月份': getattr(row, '月份'),
+                '制造业-指数': getattr(row, '制造业-指数'),
+                '制造业-同比增长': getattr(row, '制造业-同比增长'),
+                '非制造业-指数': getattr(row, '非制造业-指数'),
+                '非制造业-同比增长': getattr(row, '非制造业-同比增长'),
+            }
+            list_data.append(tmp_dict)
+
         return list_data
 
 if "__main__" == __name__:
