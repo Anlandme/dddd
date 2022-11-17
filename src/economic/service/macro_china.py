@@ -171,5 +171,23 @@ class MacroChinaService(object):
 
         return list_data
 
+    @staticmethod
+    def ppi():
+        macro_china_ppi = ak.macro_china_ppi()
+
+        list_data = []
+        for index, row in macro_china_ppi.iterrows():
+            tmp_dict = {
+                '月份': getattr(row, '月份'),
+                '当月': getattr(row, '当月'),
+                '当月同比增长': getattr(row, '当月同比增长'),
+                '累计': getattr(row, '累计'),
+            }
+            list_data.append(tmp_dict)
+
+        return list_data
+
+
+
 if "__main__" == __name__:
     pass
