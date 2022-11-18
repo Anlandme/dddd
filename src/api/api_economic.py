@@ -52,8 +52,8 @@ def china_pmi():
     result = ApiResult.success(data=macro_china_pmi)
     return result
 
-@api.route("/china/ppi", methods=["GET", "POST"])
-def china_ppi():
-    macro_china_ppi = MacroChinaService.ppi()
-    result = ApiResult.success(data=macro_china_ppi)
+@api.route("/china/cpi", methods=["GET", "POST"])
+def china_cpi():
+    macro_china_cpi = MacroChinaService.cpi()
+    result = ApiResult.success(data=macro_china_cpi)
     return result

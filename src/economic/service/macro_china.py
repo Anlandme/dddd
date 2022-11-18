@@ -187,6 +187,45 @@ class MacroChinaService(object):
 
         return list_data
 
+    @staticmethod
+    def ppi():
+        macro_china_ppi = ak.macro_china_ppi()
+
+        list_data = []
+        for index, row in macro_china_ppi.iterrows():
+            tmp_dict = {
+                '月份': getattr(row, '月份'),
+                '当月': getattr(row, '当月'),
+                '当月同比增长': getattr(row, '当月同比增长'),
+                '累计': getattr(row, '累计'),
+            }
+            list_data.append(tmp_dict)
+
+        return list_data
+
+    @staticmethod
+    def cpi():
+        macro_china_cpi = ak.macro_china_cpi()
+
+        list_data = []
+        for index, row in macro_china_cpi.iterrows():
+            tmp_dict = {
+                '全国-当月': getattr(row, '全国-当月'),
+                '全国-同比增长': getattr(row, '全国-同比增长'),
+                '全国-环比增长': getattr(row, '全国-环比增长'),
+                '全国-累计': getattr(row, '全国-累计'),
+                '城市-当月': getattr(row, '城市-当月'),
+                '城市-同比增长': getattr(row, '城市-同比增长'),
+                '城市-环比增长': getattr(row, '城市-环比增长'),
+                '城市-累计': getattr(row, '城市-累计'),
+                '农村-当月': getattr(row, '农村-当月'),
+                '农村-同比增长': getattr(row, '农村-同比增长'),
+                '农村-环比增长': getattr(row, '农村-环比增长'),
+                '农村-累计': getattr(row, '农村-累计'),
+            }
+            list_data.append(tmp_dict)
+
+        return list_data
 
 
 if "__main__" == __name__:
