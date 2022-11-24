@@ -227,6 +227,55 @@ class MacroChinaService(object):
 
         return list_data
 
+    @staticmethod
+    def shrzgm():
+        macro_china_shrzgm = ak.macro_china_shrzgm()
+
+        list_data = []
+        for index, row in macro_china_shrzgm.iterrows():
+            print(row)
+            tmp_dict = {
+                '月份': getattr(row, '月份'),
+                '社会融资规模增量': getattr(row, '社会融资规模增量'),
+                '其中-人民币贷款': getattr(row, '其中-人民币贷款'),
+                '其中-委托贷款外币贷款': getattr(row, '其中-委托贷款外币贷款'),
+                '其中-委托贷款': getattr(row, '其中-委托贷款'),
+                '其中-信托贷款 ': getattr(row, '其中-信托贷款'),
+                '其中-未贴现银行承兑汇票': getattr(row, '其中-未贴现银行承兑汇票'),
+                '其中-企业债券': getattr(row, '其中-企业债券'),
+                '其中-非金融企业境内股票融资': getattr(row, '其中-非金融企业境内股票融资'),
+
+            }
+            list_data.append(tmp_dict)
+
+        return list_data
+
+    @staticmethod
+    def money_supply():
+        macro_china_money_supply = gp.get_money_supply()
+
+        list_data = []
+        for index, row in macro_china_money_supply.iterrows():
+            print(row)
+            tmp_dict = {
+                '货币和准货币(M2)数量(亿元)': getattr(row, '货币和准货币(M2)数量(亿元)'),
+                '货': getattr(row, '货'),
+                '货币和准货币(M2)环比增长': getattr(row, '货币和准货币(M2)环比增长'),
+                '货币和准货币(M2)同比增长': getattr(row, '货币和准货币(M2)同比增长'),
+                '货币(M1)数量(亿元)': getattr(row, '货币(M1)数量(亿元)'),
+                '货币(M1)同比增长': getattr(row, '货币(M1)同比增长'),
+                '货币(M1)环比增长': getattr(row, '货币(M1)环比增长'),
+                '流通中的现金(M0)数量(亿元)': getattr(row, '流通中的现金(M0)数量(亿元)'),
+                '流通中的现金(M0)同比增长': getattr(row, '流通中的现金(M0)同比增长'),
+                '流通中的现金(M0)环比增长': getattr(row, '流通中的现金(M0)环比增长'),
+            }
+
+            list_data.append(tmp_dict)
+
+        return list_data
+
+
+
 
 if "__main__" == __name__:
     pass

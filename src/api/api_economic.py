@@ -57,3 +57,14 @@ def china_cpi():
     macro_china_cpi = MacroChinaService.cpi()
     result = ApiResult.success(data=macro_china_cpi)
     return result
+
+@api.route("/china/shrzgm", methods=["GET", "POST"])
+def china_shrzgm():
+    macro_china_shrzgm = MacroChinaService.shrzgm()
+    result = ApiResult.success(data=macro_china_shrzgm)
+    return result
+
+@api.route("/china/money_supply", methods=["GET", "POST"])
+def china_money_supply():
+    macro_china_money_supply = MacroChinaService.money_supply()
+    return ApiResult.success(data=macro_china_money_supply)
