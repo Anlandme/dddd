@@ -232,9 +232,12 @@ class MacroChinaService(object):
         macro_china_shrzgm = ak.macro_china_shrzgm()
 
         list_data = []
+
         for index, row in macro_china_shrzgm.iterrows():
-            print(row)
+            date_year = datetime.datetime.strptime(str(getattr(row, '月份')), '%Y%m%d').date()
+            current_year = date_year.year
             tmp_dict = {
+                '年份':current_year,
                 '月份': getattr(row, '月份'),
                 '社会融资规模增量': getattr(row, '社会融资规模增量'),
                 '其中-人民币贷款': getattr(row, '其中-人民币贷款'),
@@ -273,6 +276,22 @@ class MacroChinaService(object):
             list_data.append(tmp_dict)
 
         return list_data
+
+    @staticmethod
+    def M2():
+        macro_china_m2_yearly = ak.macro_china_m2_yearly()
+        list_data = []
+
+        for index, row in macro_china_m2_yearly.items():
+            tmp_dict = {
+                '日期': str(datetime.datetime.strptime(str(index), "%Y-%m-%d %H:%M:%S").date()),
+                '供应量': row,
+            }
+
+            list_data.append(tmp_dict)
+
+        return list_data
+
 
 
 

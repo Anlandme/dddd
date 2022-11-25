@@ -68,3 +68,9 @@ def china_shrzgm():
 def china_money_supply():
     macro_china_money_supply = MacroChinaService.money_supply()
     return ApiResult.success(data=macro_china_money_supply)
+
+@api.route("/china/M2", methods=["GET", "POST"])
+def china_M2():
+    macro_china_m2_yearly = MacroChinaService.M2()
+    return ApiResult.success(data=macro_china_m2_yearly)
+
