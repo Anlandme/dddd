@@ -283,10 +283,14 @@ class MacroChinaService(object):
         list_data = []
 
         for index, row in macro_china_m2_yearly.items():
+            if float(row) <= 0.01:
+                continue
+            print(index, row)
             tmp_dict = {
                 '日期': str(datetime.datetime.strptime(str(index), "%Y-%m-%d %H:%M:%S").date()),
                 '供应量': row,
             }
+
 
             list_data.append(tmp_dict)
 
